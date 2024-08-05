@@ -6,62 +6,64 @@ This project demonstrates autonomous drone navigation using ROS2, C++, and Gazeb
 
 ## Prerequisites
 
-ROS2 (Foxy or later)
-Gazebo (compatible with ROS2)
-C++
-Pre-trained models for ORB SLAM and YOLO
-Custom Gazebo world with fruit models
+- ROS2 (Foxy or later)
+- Gazebo (compatible with ROS2)
+- C++
+- Pre-trained models for ORB SLAM and YOLO
+- Custom Gazebo world with fruit models
 
 ## Installation
-1. Clone the repository
-    
-    bash
-    Copy code
+
+1. **Clone the repository**
+
+    ```bash
     git clone https://github.com/yourusername/ros2_autonomous_drone.git
     cd ros2_autonomous_drone
+    ```
 
-2. Install dependencies
-    
-    bash
-    Copy code
+2. **Install dependencies**
+
+    ```bash
     sudo apt update
     sudo apt install ros-foxy-cv-bridge ros-foxy-image-transport ros-foxy-vision-msgs libopencv-dev
+    ```
 
-3. Build the workspace
-    
-    bash
-    Copy code
+3. **Build the workspace**
+
+    ```bash
     cd ~/ros2_autonomous_drone
     colcon build
     source install/setup.bash
+    ```
 
-4. Download or create the Gazebo world
+4. **Download or create the Gazebo world**
 
-   Save your custom Gazebo world file (e.g., orchard.world) in the worlds/ directory.
+   Save your custom Gazebo world file (e.g., `orchard.world`) in the `worlds/` directory.
 
-   Example orchard.world file location: ros2_autonomous_drone/worlds/orchard.world
+   Example `orchard.world` file location: `ros2_autonomous_drone/worlds/orchard.world`
 
 ## Usage
-1. Launch the Gazebo simulation with ROS2
-     
-    bash
-    Copy code
+
+1. **Launch the Gazebo simulation with ROS2**
+
+    ```bash
     ros2 launch launch/drone_launch.py
+    ```
 
-2. Monitor the drone’s progress
+2. **Monitor the drone’s progress**
 
-    The drone will navigate through the environment, detect fruits, and record their locations.
+   The drone will navigate through the environment, detect fruits, and record their locations.
 
 ## Directory Structure
 
-- src/: Contains the ROS2 packages for ORB SLAM, YOLO, and PID controller.
-- launch/: Contains the ROS2 launch file (drone_launch.py) to start the simulation and nodes.
-- worlds/: Contains custom Gazebo world files (e.g., orchard.world).
+- `src/`: Contains the ROS2 packages for ORB SLAM, YOLO, and PID controller.
+- `launch/`: Contains the ROS2 launch file (`drone_launch.py`) to start the simulation and nodes.
+- `worlds/`: Contains custom Gazebo world files (e.g., `orchard.world`).
 
 ## License
 
-This project is licensed under the Apache License - see the LICENSE file for details.
+This project is licensed under the Apache License - see the [LICENSE](LICENSE) file for details.
 
 ## Note
 
-Please note that some parts of the code are not provided due to plagiarism concerns. Ensure to replace placeholders like your_email@example.com and yourusername with your actual information.
+Please note that some parts of the code are not provided due to plagiarism concerns. Ensure to replace placeholders like `your_email@example.com` and `yourusername` with your actual information.
